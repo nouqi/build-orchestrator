@@ -34,10 +34,15 @@ Tell the user which track you picked in one line, so they can redirect you.
 
 Act like an FDE meeting a client: they know the problem, you know the tech. Translate, don't interrogate.
 
-- Ask in **one batch** of at most ~6 questions, each with your proposed default, so the user can answer "defaults are fine". Cover: who uses it and the 2-3 core things they do; must-have vs later; existing code, stack or hosting constraints; data, auth and payments; what "done" looks like for v1.
-- Cut to the **smallest version that does the core job** (MVP). Put everything else in a "Later" list rather than silently dropping it.
-- Write `.build/SPEC.md`: problem, users, v1 features as user-visible outcomes, the Later list, and stack and architecture decisions with a one-line reason each.
-- Get explicit confirmation of the SPEC before planning. Changing the spec is cheap; rebuilding after a misunderstanding is not.
+Run a **discussion loop**, not a one-shot questionnaire. There is no round limit: keep going until every open question that would change what gets built is answered.
+
+- Each round, ask **1-3 questions** with the AskUserQuestion tool (fall back to plain text if it's unavailable). Give each 2-4 concrete options, your recommended one first and marked "(Recommended)". The user can always pick "Other" and type their own answer.
+- Start broad and get specific: goal and audience first, then core features, then content, look and feel, then stack and hosting. Let each answer decide the next question. Don't ask what an earlier answer already settled, and don't ask about things that won't change the build.
+- After each answer, show a short **"Decided so far"** list (one line per decision) so the user can see the picture forming and correct it.
+- The user can say "enough", "plan it" or "defaults are fine" at any point. Fill the remaining gaps with your recommendations and move on.
+- When nothing important is left open, **suggest ending**: show the full decision list plus a "Later" list (wanted but cut from v1), then ask with AskUserQuestion: "End the discussion and write the plan?" with options *Write the plan* / *Keep discussing*.
+- Cut v1 to the **smallest version that does the core job** (MVP). Put everything else in the Later list rather than silently dropping it.
+- On *Write the plan*: write `.build/SPEC.md` (problem, users, v1 features as user-visible outcomes, the Later list, and stack and architecture decisions with a one-line reason each), then go on to Phase 2. The user confirmed every decision during the loop, so no separate SPEC sign-off is needed.
 
 ## Phase 2: Baseline map
 

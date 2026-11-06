@@ -21,4 +21,6 @@ Restart Claude Code after installing. Update with `claude plugin marketplace upd
 
 ## Use
 
-Ask Claude Code to build something, e.g. "build me a simple booking site". You can also invoke it directly with `/build-orchestrator`.
+Type `/start <what you want to build>` (with the plugin: `/build-orchestrator:start ...`), e.g. `/start a portfolio website`. Claude runs an open-ended Q&A with you until the build is clear, then suggests ending the discussion and writes the plan.
+
+You can also just ask Claude Code to build something and the skill triggers on its own, or invoke it directly with `/build-orchestrator`.
