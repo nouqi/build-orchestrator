@@ -1,0 +1,12 @@
+{
+  "name": "build-orchestrator",
+  "owner": { "name": "nouqi" },
+  "description": "Tiered-model build planning skill for Claude Code.",
+  "plugins": [
+    {
+      "name": "build-orchestrator",
+      "source": "./",
+      "description": "Turn any build request into a scoped plan and run it with tiered models."
+    }
+  ]
+}

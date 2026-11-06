@@ -1,0 +1,8 @@
+{
+  "name": "build-orchestrator",
+  "description": "Turn any build request into a scoped plan and run it with tiered models: the main session plans, Sonnet triages and verifies, Haiku does mechanical work in parallel.",
+  "version": "1.0.0",
+  "author": { "name": "nouqi" },
+  "repository": "https://github.com/nouqi/build-orchestrator",
+  "license": "MIT"
+}

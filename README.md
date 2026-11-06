@@ -4,11 +4,20 @@ A Claude Code skill that turns any build request (vague or precise) into a scope
 
 ## Install
 
+As a Claude Code plugin (works in every project):
+
 ```
-git clone https://github.com/nouqi/build-orchestrator.git ~/.claude/skills/build-orchestrator
+claude plugin marketplace add nouqi/build-orchestrator
+claude plugin install build-orchestrator@build-orchestrator
 ```
 
-Update with `git pull` in that folder. Restart Claude Code after installing.
+Or with the skills CLI:
+
+```
+npx skills add nouqi/build-orchestrator
+```
+
+Restart Claude Code after installing. Update with `claude plugin marketplace update build-orchestrator`.
 
 ## Use
 
